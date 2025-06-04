@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #e9ecef);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: url("dld.jpg") center/cover no-repeat;
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Navegación */
+nav {
+  background-color: #1c2833;
+  text-align: center;
+  padding: 12px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: #2e86c1;
+}
+
+nav ul li a:hover {
+  background-color: #117a65;
+}
+
+/* Búsqueda */
+.busqueda {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.busqueda input {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #117a65;
+  border-radius: 6px;
+  width: 60%;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.busqueda input:focus {
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.4);
+  outline: none;
+}
+
+/* Contenedor */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Artículo principal */
+article {
+  flex: 3;
+  min-width: 300px;
+}
+
+/* Secciones */
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 5px solid #117a65;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+section h2 {
+  color: #117a65;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+/* PASÍON EN CADA JUGADA */
+.imagen-futbol{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+/* Aside */
+aside {
+  flex: 1;
+  min-width: 250px;
+  background-color: #fdfefe;
+  border-left: 5px solid #cb4335;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+  color: #cb4335;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+  background: url("dlh.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* Contador */
+#contador {
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .busqueda input {
+    width: 90%;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  article, aside {
+    width: 100%;
+  }
+}

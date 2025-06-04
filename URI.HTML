@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Uriel Miranda García">
+  <meta name="description" content="Historia, equipos, jugadores y curiosidades del fútbol mexicano">
+  <meta name="keywords" content="fútbol mexicano, Liga MX, historia, equipos, jugadores, estadios, pasión">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fútbol Mexicano</title>
+  <link rel="stylesheet" href="FUT.css">
+</head>
+<body>
+
+  <header>
+    <h1>FÚTBOL MEXICANO: PASIÓN Y ORGULLO</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://www.facebook.com/100064082141341/posts/sistema-de-ligas-de-f%C3%BAtbol-m%C3%A9xico-federaci%C3%B3n-mexicana-de-f%C3%BAtbolla-federaci%C3%B3n-mex/727348612744537/">LIGAS</a></li>
+      <li><a href="https://www.tudn.com/futbol/liga-mx/equipos">EQUIPOS</a></li>
+      <li><a href="https://www.transfermarkt.mx/liga-mx-clausura/marktwerte/wettbewerb/MEX1">JUGADORES</a></li>
+      <li><a href="https://www.olympics.com/es/noticias/liga-mx-equipos-ganadores-historial-completo">COPAS</a></li>
+    </ul>
+  </nav>
+
+  <div class="busqueda">
+    <input type="text" id="buscar" placeholder="Buscar en el contenido...">
+  </div>
+
+  <div class="contenedor">
+    <article>
+      <section>
+        <h2>EL MARAVILLOSO MUNDO DEL FÚTBOL MEXICANO</h2>
+        <p>El fútbol en México es más que un deporte, es una pasión que une a millones de personas. Desde las ligas infantiles hasta la Selección Nacional, el balón no deja de rodar.</p>
+        <ul>
+          <li><strong>Ligas principales:</strong> Liga MX (Primera División), Liga Expansión MX (Segunda División), Liga MX Femenil, Fuerzas Básicas / Juveniles.</li>
+          <li><strong>Estadios importantes:</strong> Estadio Azteca, Estadio BBVA, Estadio Akron, Estadio Olímpico Universitario.</li>
+          <li><strong>Jugadores históricos:</strong> Hugo Sánchez, Cuauhtémoc Blanco, Rafael Márquez, Hirving Lozano, Guillermo Ochoa, Edson Álvarez.</li>
+          <li><strong>Selección Mexicana:</strong> Participaciones en Copas del Mundo, títulos de Copa Oro, momentos memorables, jugadores emblemáticos.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>PASÍON EN CADA JUGADA </h2>
+        <img src="dls.jpg" alt="Pasión por el fútbol en México" class="imagen del futbol">
+        <p>La pasión se vive en cada rincón del país.</p>
+      </section>
+
+      <section>
+        <h2>HISTORIA Y CRECIMIENTO</h2>
+        <p>El fútbol llegó a México a finales del siglo XIX. Desde entonces, ha evolucionado hasta convertirse en el deporte más popular del país, con una liga profesional consolidada, una selección competitiva y una gran afición.</p>
+        <p>La Liga MX, con más de 18 equipos, es una de las más vistas de América Latina y ha exportado talento a las mejores ligas del mundo.</p>
+      </section>
+    </article>
+
+    <aside>
+      <h2>CURIOSIDADES DEL FÚTBOL MEXICANO</h2>
+      <ul>
+        <li>El Estadio Azteca es uno de los pocos en el mundo que ha albergado dos finales de Copa del Mundo.</li>
+        <li>Hugo Sánchez fue cinco veces campeón de goleo en España con el Real Madrid.</li>
+        <li>La primera transmisión televisiva de un partido en México fue en 1950.</li>
+        <li>Cuauhtémoc Blanco tiene una jugada que lleva su nombre: la "Cuauhtemiña".</li>
+        <li>La afición mexicana es reconocida mundialmente por su pasión y ambiente en los estadios.</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Uriel Miranda García - 6.2 - Páginas Web.</p>
+    <p id="contador">Cargando visitas...</p>
+  </footer>
+
+  <script>
+    // Barra de búsqueda
+    const buscar = document.getElementById('buscar');
+    buscar.addEventListener('input', () => {
+      const filtro = buscar.value.toLowerCase();
+      const secciones = document.querySelectorAll('section, aside');
+      secciones.forEach(seccion => {
+        const texto = seccion.innerText.toLowerCase();
+        seccion.style.display = texto.includes(filtro) ? 'block' : 'none';
+      });
+    });
+
+    // Contador de visitas
+    let visitas = localStorage.getItem('visitasFutbol');
+    visitas = visitas ? parseInt(visitas) + 1 : 1;
+    localStorage.setItem('visitasFutbol', visitas);
+    document.getElementById('contador').textContent = 
+      Esta página ha sido visitada ${visitas} ${visitas === 1 ? 'vez' : 'veces'} desde este navegador.;
+  </script>
+
+</body>
+</html>
